@@ -1,4 +1,4 @@
-passos para instalação da api
+passos para instalação da api.
 
 descomentar a extensão "extension = fileinfo" no arquivo php.ini da pasta php;
 composer create-project laravel/laravel api
