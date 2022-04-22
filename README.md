@@ -37,7 +37,7 @@ O Protoss é uma api em laravel 9 para servir aplicações de marketing digital�
 
 Nos links abaixo você encontra o layout do projeto web. Lembrando que você precisa ter uma conta no [Figma](http://figma.com/) para acessá-lo.
 
-- [Layout](https://www.figma.com/file/mK0RZ4IPHDklCywzoEIwdJ/Move.it-1.0)
+- [Layout](https://www.figma.com/file/mK0RZ4IPHDklCywzoEIwdJ/wow)
 
 ## 🧠 Agradecimento
 
