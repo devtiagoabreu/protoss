@@ -63,6 +63,14 @@ php artisan migrate:fresh
 #neste momento pode acontecer algum erro referente ao driver do banco no arquivo php.ini (retire  comentário';' de extension=pdo_mysql)
 
 --CRIANDO AS ROTAS
+As rotas foram originalmente criadas no laravel 7 porém o laravel foi atualizado e o modo para declarar foi alterado
+também deve se usar o "use" do controller nas rotas 
+segue o erro e a correção: Target class [AuthController] does not exist.
+old: Route::post('/user', [AuthController::class, 'create']);
+new: Route::post('/user', 'AuthController@create');
+inserir o use do controller no arquivo de rotas: use App\Http\Controllers\AuthController;
+https://www.codegrepper.com/code-examples/php/Target+class+%5BAuthController%5D+does+not+exist.
+
 
 --CRIANDO CONTROLLERS E MODELS
 php artisan make:Controller AuthController
@@ -84,6 +92,8 @@ php artisan make:Model Product
 
 
 --CRIANDO USUARIOS
+token gerado: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3VzZXIiLCJpYXQiOjE2NTA2NDkzNzgsImV4cCI6MTY1MDY1Mjk3OCwibmJmIjoxNjUwNjQ5Mzc4LCJqdGkiOiJNZFlFUEw2MUticzdqWkJlIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.utdEosH91IwF_95_v5JpAw8LTDgU8zr7wHTW1cVs6sM"
+Insomnia.json gerado...
 
 --FAZENDO LOGIN
 

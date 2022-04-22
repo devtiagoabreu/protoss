@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class AuthController extends Controller
 {
@@ -15,5 +16,56 @@ class AuthController extends Controller
                 'anauthorized'
             ]
         ]);
+    }
+
+    public function create(Request $request) {
+        $array = ['error'=>''];
+
+        $name = $request->input('name');
+        $email = $request->input('email');
+        $password = $request->input('password');
+        $birthdate = $request->input('birthdate');
+        $name = $request->input('name');
+        
+        if($name && $email && $password && $birthdate) {
+            //validando data de nascimento
+            if(strtotime($birthdate) == false) {
+                $array['error'] = 'Data de nascimento inválida!';
+                return $array;
+            }
+            //verificar se existe email cadastrado
+            $emailExists = User::where('email', $email)->count();
+            if ($emailExists === 0) {
+                
+                $hash = password_hash($password, PASSWORD_DEFAULT);
+
+                $newUser = new User();
+                $newUser->name = $name;
+                $newUser->email = $email;
+                $newUser->password = $hash;
+                $newUser->birthdate = $birthdate;
+                $newUser->save();
+
+                $token = auth()->attempt([
+                    'email' => $email,
+                    'password' => $password
+                ]);
+                if (!$token) {
+                    $array['error'] = 'Erro ao criar usuário!';
+                    return $array;
+                }
+
+                $array['token'] = $token;
+
+            } else {
+                $array['error'] = 'E-mail já cadastrado!'; 
+                return $array; 
+            }
+        } else {
+            $array['error'] = 'Por Favor Preencha todos os campos.';
+            return $array;
+        }      
+
+        return $array;
     }
 }

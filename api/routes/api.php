@@ -2,18 +2,25 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+
 
 Route::get('/ping', function(){
     return ['pong'=>true];
 });
 
+
+
+
+/*
 Route::get('/401', 'AuthController@unauthorized')->name('login');
 
 Route::post('/auth/login', 'AuthController@login');
 Route::post('/auth/logout', 'AuthController@logout');
 Route::post('/auth/refresh', 'AuthController@refresh');
-
-Route::post('/user', 'AuthController@create');
+*/
+Route::post('/user', [AuthController::class, 'create']);
+/*
 Route::put('/user', 'UserController@create');
 Route::post('/user/avatar', 'UserController@updateAvatar');
 Route::post('/user/cover', 'UserController@updateCover');
@@ -35,3 +42,4 @@ Route::get('/search', 'SearchController@search');
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+*/
