@@ -1,6 +1,0 @@
-passos para instalação da api.
-teste ssh: ssh -T git@github.com-devtiagoabreu
-
-descomentar a extensão "extension = fileinfo" no arquivo php.ini da pasta php;
-composer create-project laravel/laravel api
-
