@@ -23,8 +23,36 @@
 
     GET api/search (txt)
 
+--CRIAR PROJETO
+    cd x:\dev\atriostech\protoss\
+    git clone https://github.com/devtiagoabreu/projetoLuna.git .
+    laravel new api
 
+--INICIANDO SERVIDOR PHP PARA TESTE
+    php artisan serve
+--TESTANDO api APÓS CONFIG DA ROTA PING PONG
+    GET NO INSOMINIA: http://localhost:8000/api/ping
     
+--INSTALAR BIBLIOTECAS
 
--CRIAR PROJETO
--INSTALA AS BIBLIOTECAS
+--GERANDO A PLICATION KEY
+php artisan key:generate
+
+--AUTENTICACAO JWT
+composer require tymon/jwt-auth
+se ocorrer erro tente
+composer require tymon/jwt-auth --ignore-platform-reqs
+
+--PUBLICANDO CONFIGURACAO
+php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"
+
+--CHAVE SECRETA JWT
+php artisan jwt:secret
+
+--INSTALANDO BIBLIOTECA INTERVATION|IMAGE
+composer dump-autoload
+composer self-update
+composer update
+composer require intervation/image (se não der certo linhas abaixo)
+-->https://curatedphp.com/r/intervention-image-cache-interventionimagecache/index.html
+composer require intervention/imagecache link
