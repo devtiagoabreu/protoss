@@ -70,16 +70,17 @@ php artisan make:Controller UserController
 php artisan make:Controller FeedController
 php artisan make:Controller PostController
 php artisan make:Controller SearchController
+php artisan make:Controller LeadController
+php artisan make:Controller ProductController
 
-php artisan make:Model UserFavorite
-php artisan make:Model UserAppointments
-php artisan make:Model Professional
-php artisan make:Model ProfessionalPhotos
-php artisan make:Model ProfessionalReviews
-php artisan make:Model ProfessionalServices
-php artisan make:Model ProfessionalTestimonial
-php artisan make:Model ProfessionalAvailability
-
+--MODELS DEVEM SER CRIADOS COM O NOME NO SINGULAR POR CONVENÇÃO
+php artisan make:Model User
+php artisan make:Model UserRelation
+php artisan make:Model Post
+php artisan make:Model PostLike
+php artisan make:Model PostComment
+php artisan make:Model Lead
+php artisan make:Model Product
 
 
 --CRIANDO USUARIOS
