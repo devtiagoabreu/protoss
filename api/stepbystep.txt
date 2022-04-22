@@ -60,6 +60,7 @@ composer require intervention/imagecache link
 --CRIANDO MIGRATIONS
 php artisan make:migration create_all_tables
 php artisan migrate:fresh
+#neste momento pode acontecer algum erro referente ao driver do banco no arquivo php.ini (retire  comentário';' de extension=pdo_mysql)
 
 --CRIANDO CONTROLLERS E MODELS
 php artisan make:Controller AuthController
