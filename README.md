@@ -41,7 +41,7 @@ Nos links abaixo você encontra o layout do projeto web. Lembrando que você pre
 
 ## 🧠 Agradecimento
 
-Agradeço aos colaboradores da Equipe de T.I.C Pro Moda Têxtil, juntos estamos desenvolvendo algo importante!
+Agradeço aos colaboradores da Equipe de T.I.C Pro Moda Têxtil (Igor e Rodrigo), juntos estamos desenvolvendo algo importante!
 
 
 ## :memo: Licença
