@@ -67,7 +67,9 @@ php artisan migrate:fresh
 --CRIANDO CONTROLLERS E MODELS
 php artisan make:Controller AuthController
 php artisan make:Controller UserController
-php artisan make:Controller ProfessionalController
+php artisan make:Controller FeedController
+php artisan make:Controller PostController
+php artisan make:Controller SearchController
 
 php artisan make:Model UserFavorite
 php artisan make:Model UserAppointments
