@@ -56,3 +56,28 @@ composer update
 composer require intervation/image (se não der certo linhas abaixo)
 -->https://curatedphp.com/r/intervention-image-cache-interventionimagecache/index.html
 composer require intervention/imagecache link
+
+--CRIANDO MIGRATIONS
+php artisan make:migration create_all_tables
+php artisan migrate:fresh
+
+--CRIANDO CONTROLLERS E MODELS
+php artisan make:Controller AuthController
+php artisan make:Controller UserController
+php artisan make:Controller ProfessionalController
+
+php artisan make:Model UserFavorite
+php artisan make:Model UserAppointments
+php artisan make:Model Professional
+php artisan make:Model ProfessionalPhotos
+php artisan make:Model ProfessionalReviews
+php artisan make:Model ProfessionalServices
+php artisan make:Model ProfessionalTestimonial
+php artisan make:Model ProfessionalAvailability
+
+--CRIANDO AS ROTAS
+
+--CRIANDO USUARIOS
+
+--FAZENDO LOGIN
+
