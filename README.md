@@ -33,11 +33,15 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O Protoss é uma api em laravel 9 para servir aplicações de marketing digital💜
 
+- [Step by step](https://github.com/devtiagoabreu/protoss/blob/main/api/stepbystep.txt)
+- [Insomnia](https://github.com/devtiagoabreu/protoss/blob/main/api/Insomnia.json)
+- [Outros Links](https://atriostech.com.br/protoss/links/)
+
 ## 🔖 Layout
 
 Nos links abaixo você encontra o layout do projeto web. Lembrando que você precisa ter uma conta no [Figma](http://figma.com/) para acessá-lo.
 
-- [Layout](https://www.figma.com/file/mK0RZ4IPHDklCywzoEIwdJ/wow)
+- [Layout](https://www.figma.com/file/27XACHqWa9KWubgJbS4sF9/protoss?node-id=0%3A1)
 
 ## 🧠 Agradecimento
 
