@@ -13,7 +13,7 @@ class AuthController extends Controller
             'except'=>[
                 'login', 
                 'create', 
-                'anauthorized'
+                'unauthorized'
             ]
         ]);
     }
