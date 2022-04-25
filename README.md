@@ -45,7 +45,7 @@ Nos links abaixo você encontra o layout do projeto web. Lembrando que você pre
 
 ## 🧠 Agradecimento
 
-Agradeço aos colaboradores da Equipe de T.I.C Pro Moda Têxtil (Igor e Rodrigo), juntos estamos desenvolvendo algo importante!
+Agradeço aos colaboradores da Equipe de T.I.C Pro Moda Têxtil ([Igor Santiello](https://github.com/RodrigoCMoura)  e [Rodrigo Moura](https://github.com/IgorG17), juntos estamos desenvolvendo algo importante!
 
 
 ## :memo: Licença
