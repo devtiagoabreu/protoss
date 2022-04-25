@@ -67,8 +67,7 @@ class AuthController extends Controller
         $email = $request->input('email');
         $password = $request->input('password');
         $birthdate = $request->input('birthdate');
-        $name = $request->input('name');
-        
+                
         if($name && $email && $password && $birthdate) {
             //validando data de nascimento
             if(strtotime($birthdate) == false) {

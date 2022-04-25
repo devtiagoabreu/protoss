@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
 
 
 Route::get('/ping', function(){
@@ -17,8 +18,9 @@ Route::post('/auth/logout', [AuthController::class, 'logout']);
 Route::post('/auth/refresh', [AuthController::class, 'refresh']);
 
 Route::post('/user', [AuthController::class, 'create']);
+
+Route::put('/user', [UserController::class, 'update']);
 /*
-Route::put('/user', 'UserController@create');
 Route::post('/user/avatar', 'UserController@updateAvatar');
 Route::post('/user/cover', 'UserController@updateCover');
 
