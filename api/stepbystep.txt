@@ -113,3 +113,5 @@ ok
 --SETANDO AVATAR
 descomentar no php.ini 
 extension=gd
+
+--SETANDO cover
