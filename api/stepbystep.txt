@@ -31,7 +31,7 @@ composer create-project laravel/laravel api
 
 --CRIAR PROJETO
     cd x:\dev\atriostech\protoss\
-    git clone https://github.com/devtiagoabreu/projetoLuna.git .
+    git clone https://github.com/devtiagoabreu/protoss.git .
     laravel new api
 OK
 
@@ -133,3 +133,5 @@ ok
 
 --POSTANDO NO FEED
 ok
+
+--Listando o feed (1/3)
