@@ -102,4 +102,14 @@ token gerado: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxo
 Insomnia.json gerado...
 
 --FAZENDO LOGIN
+ok
 
+--CRIANDO USUÁRIO
+ok
+
+--ALTERANDO USUÁRIO
+ok
+
+--SETANDO AVATAR
+descomentar no php.ini 
+extension=gd
