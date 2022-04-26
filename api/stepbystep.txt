@@ -33,27 +33,36 @@ composer create-project laravel/laravel api
     cd x:\dev\atriostech\protoss\
     git clone https://github.com/devtiagoabreu/projetoLuna.git .
     laravel new api
+OK
 
 --INICIANDO SERVIDOR PHP PARA TESTE
     php artisan serve
+OK
+
 --TESTANDO api APÓS CONFIG DA ROTA PING PONG
     GET NO INSOMINIA: http://localhost:8000/api/ping
+OK
     
 --INSTALAR BIBLIOTECAS
+OK
 
 --GERANDO A PLICATION KEY
 php artisan key:generate
+OK
 
 --AUTENTICACAO JWT
 composer require tymon/jwt-auth
 se ocorrer erro tente
 composer require tymon/jwt-auth --ignore-platform-reqs
+OK
 
 --PUBLICANDO CONFIGURACAO
 php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"
+OK
 
 --CHAVE SECRETA JWT
 php artisan jwt:secret
+OK
 
 --INSTALANDO BIBLIOTECA INTERVATION|IMAGE
 composer dump-autoload
@@ -62,11 +71,13 @@ composer update
 composer require intervation/image (se não der certo linhas abaixo)
 -->https://curatedphp.com/r/intervention-image-cache-interventionimagecache/index.html
 composer require intervention/imagecache link
+OK
 
 --CRIANDO MIGRATIONS
 php artisan make:migration create_all_tables
 php artisan migrate:fresh
 #neste momento pode acontecer algum erro referente ao driver do banco no arquivo php.ini (retire  comentário';' de extension=pdo_mysql)
+OK
 
 --CRIANDO AS ROTAS
 As rotas foram originalmente criadas no laravel 7 porém o laravel foi atualizado e o modo para declarar foi alterado
@@ -76,7 +87,7 @@ old: Route::post('/user', [AuthController::class, 'create']);
 new: Route::post('/user', 'AuthController@create');
 inserir o use do controller no arquivo de rotas: use App\Http\Controllers\AuthController;
 https://www.codegrepper.com/code-examples/php/Target+class+%5BAuthController%5D+does+not+exist.
-
+OK
 
 --CRIANDO CONTROLLERS E MODELS
 php artisan make:Controller AuthController
@@ -86,6 +97,7 @@ php artisan make:Controller PostController
 php artisan make:Controller SearchController
 php artisan make:Controller LeadController
 php artisan make:Controller ProductController
+OK
 
 --MODELS DEVEM SER CRIADOS COM O NOME NO SINGULAR POR CONVENÇÃO
 php artisan make:Model User
@@ -95,11 +107,12 @@ php artisan make:Model PostLike
 php artisan make:Model PostComment
 php artisan make:Model Lead
 php artisan make:Model Product
-
+OK
 
 --CRIANDO USUARIOS
 token gerado: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3VzZXIiLCJpYXQiOjE2NTA2NDkzNzgsImV4cCI6MTY1MDY1Mjk3OCwibmJmIjoxNjUwNjQ5Mzc4LCJqdGkiOiJNZFlFUEw2MUticzdqWkJlIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.utdEosH91IwF_95_v5JpAw8LTDgU8zr7wHTW1cVs6sM"
 Insomnia.json gerado...
+OK
 
 --FAZENDO LOGIN
 ok
@@ -113,5 +126,10 @@ ok
 --SETANDO AVATAR
 descomentar no php.ini 
 extension=gd
+ok
 
 --SETANDO cover
+ok
+
+--POSTANDO NO FEED
+ok
