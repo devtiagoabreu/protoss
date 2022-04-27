@@ -1,42 +1,27 @@
 passos para instalação da api.
-teste ssh: ssh -T git@github.com-devtiagoabreu
 
-descomentar a extensão "extension = fileinfo" no arquivo php.ini da pasta php;
-composer create-project laravel/laravel api
+--se esse projeto for clonado 
 
--PLANEJAMENTO DO ENDPOINTS
-    POST api/auth/login (email, password)* (acessível sem login)
-    POST api/auth/logout
-    POST api/auth/refresh
+1º crie um banco de dados sem tabelas, sgbd mariadb;
+2º entre em seu projeto, na pasta api e rode os comandos:
+composer install
+3º renomeie o .env.example para .env
+4º faça as configurações no seu .env como por exemplo: banco de dados;
+5º ainda dentro da pasta api, rode os comandos:
+php artisan key:generate
+php artisan migrate:fresh
+--pronto, seu projeto está ok para rodar
+php artisan serve
 
-    POST api/user (name, email, password, birthdate)*
-    PUT api/user (name, email, password, birthdate, password, password_confirm)
-    
-    POST api/user/cover (cover)
-    POST api/user/avatar (avatar)
-
-    GET api/feed (page)
-    GET api/user/feed (page)
-    GET api/user/123/feed (page)
-
-    GET api/user
-    GET api/user/123
-
-    POST api/feed (type=text|photo, body, photo)
-
-    POST api/post/123/like
-    POST api/post/123/comment (txt) 
-
-    GET api/search (txt)
-
+--para iniciar o projeto passo a passo
 --CRIAR PROJETO
-    cd x:\dev\atriostech\protoss\
-    git clone https://github.com/devtiagoabreu/protoss.git .
-    laravel new api
+cd x:\dev\atriostech\protoss\
+git clone https://github.com/devtiagoabreu/protoss.git .
+laravel new api
 OK
 
 --INICIANDO SERVIDOR PHP PARA TESTE
-    php artisan serve
+php artisan serve
 OK
 
 --TESTANDO api APÓS CONFIG DA ROTA PING PONG
@@ -140,7 +125,8 @@ ok
 --feed do usuário
 ok
 
-
+--Informações do usuário
+ok
 
 
 

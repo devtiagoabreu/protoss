@@ -27,10 +27,10 @@ Route::post('/user/cover', [UserController::class, 'updateCover']);
 Route::get('/feed', [FeedController::class, 'read']);
 Route::get('/user/feed', [FeedController::class, 'userFeed']);
 Route::get('/user/{id}/feed', [FeedController::class, 'userFeed']);
-/*
-Route::get('/user', 'UserController@read');
-Route::get('/user/{id}', 'UserController@read');
-*/
+
+Route::get('/user', [UserController::class, 'read']);
+Route::get('/user/{id}', [UserController::class, 'read']);
+
 Route::post('/feed', [FeedController::class,'create']);
 /*
 Route::post('/post/{id}like', 'PostController@like');

@@ -1,0 +1,24 @@
+-PLANEJAMENTO DO ENDPOINTS
+    POST api/auth/login (email, password)* (acessível sem login)
+    POST api/auth/logout
+    POST api/auth/refresh
+
+    POST api/user (name, email, password, birthdate)*
+    PUT api/user (name, email, password, birthdate, password, password_confirm)
+    
+    POST api/user/cover (cover)
+    POST api/user/avatar (avatar)
+
+    GET api/feed (page)
+    GET api/user/feed (page)
+    GET api/user/123/feed (page)
+
+    GET api/user
+    GET api/user/123
+
+    POST api/feed (type=text|photo, body, photo)
+
+    POST api/post/123/like
+    POST api/post/123/comment (txt) 
+
+    GET api/search (txt)
