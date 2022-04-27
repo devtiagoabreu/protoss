@@ -134,4 +134,16 @@ ok
 --POSTANDO NO FEED
 ok
 
---Listando o feed (1/3)
+--Listando o feed 
+ok
+
+--feed do usuário
+ok
+
+
+
+
+
+
+
+--iniciando CMS Admin LTE

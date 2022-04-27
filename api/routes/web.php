@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', [Site\HomeController::class, 'index']);
+
+Route::prefix('painel')->group(function(){
+    Route::get('/', [Admin\HomeController::class, 'index']);
 });
