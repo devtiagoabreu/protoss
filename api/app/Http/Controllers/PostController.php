@@ -54,8 +54,35 @@ class PostController extends Controller
             return $array;
         }
 
-       
+        return $array;
+    }
 
+    public function comment(Request $request, $id) {
+        $array = ['error'=>''];
+
+        $txt = $request->input('txt');
+
+        // 1. verificar se o post existe
+        $postExists = Post::find($id);
+        if($postExists) {
+           if($txt) {
+
+                $newComment = new PostComment();
+                $newComment->id_post = $id;
+                $newComment->id_user = $this->loggedUser['id'];
+                $newComment->created_at = date('Y-m-d H:i:s');
+                $newComment->body = $txt;
+                $newComment->save();
+
+           } else {
+            $array['error'] = 'Por favor, envie um texto para o comentário!';
+            return $array;
+           } 
+            
+        } else {
+            $array['error'] = 'Post não existe!';
+            return $array;
+        }
 
         return $array;
     }
