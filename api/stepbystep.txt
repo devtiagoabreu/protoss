@@ -137,6 +137,9 @@ ok
 --Buscando usuários
 ok
 
+--Adição nos Endpoints
+ok
+
 
 
 
