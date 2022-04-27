@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\FeedController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\SearchController;
 
 
 Route::get('/ping', function(){
@@ -36,10 +37,10 @@ Route::post('/feed', [FeedController::class, 'create']);
 
 Route::post('/post/{id}/like', [PostController::class, 'like']);
 Route::post('/post/{id}/comment', [PostController::class, 'comment']);
-/*
-Route::get('/search', 'SearchController@search');
+
+Route::get('/search', [SearchController::class, 'search']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-*/
+
