@@ -140,6 +140,8 @@ ok
 --Adição nos Endpoints
 ok
 
+--Seguindo/deseguindo
+ok
 
 
 

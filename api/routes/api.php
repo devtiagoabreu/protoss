@@ -29,7 +29,7 @@ Route::post('/user/cover', [UserController::class, 'updateCover']);
 Route::get('/feed', [FeedController::class, 'read']);
 Route::get('/user/feed', [FeedController::class, 'userFeed']);
 Route::get('/user/{id}/feed', [FeedController::class, 'userFeed']);
-//Route::post('/user/{id}/follow', [UserController::class, 'follow']);
+Route::post('/user/{id}/follow', [UserController::class, 'follow']);
 //Route::get('/user/{id}/followers', [UserController::class, 'followers']);
 //Route::get('/user/{id}/photos', [UserController::class, 'photos']);
 

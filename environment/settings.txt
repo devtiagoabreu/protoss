@@ -1,0 +1,44 @@
+*Múltiplas chaves SSH para GitHub*
+
+*verificar chaves já existentes*
+ls ~/.ssh
+
+*gerar chave com nome específico para não sobrescrever as chaves existentes*
+ssh-keygen -t rsa -b 4096 -C "seu-email@email.com"
+
+*gerar arquivo config dentro da .ssh*
+# Personal account
+Host github.com-usuario_git
+   HostName github.com
+   User git
+   IdentityFile C:\Users\promoda\.ssh\id_rsa_usuario_git
+
+# Office account
+Host github.com-usuario_git
+   HostName github.com
+   User git
+   IdentityFile C:\Users\promoda\.ssh\id_rsa
+
+*Feito isso, basta adicionar essa nova chave ao seu repositório*
+*e alterar no repositório clonado o remote, para fazer isso, deve alterar*
+*a url para a que você configurou em Host, da seguinte forma:*
+git remote add origin git@github.com-usuario_git:usuario_git/nome_repositorio.git
+
+*ou se quiser clonar:*
+git clone git@github.com-usuario_git:usuario_git/nome_repositorio.git
+
+
+*entrar no repositório local e setar de forma não global o user e email git*
+git config user.name "NomeUsuario"
+git config user.email seu-email@email.com
+
+*ainda dentro do repositório setar a ssh no config do git*
+ sshCommand = ssh -i ~/.ssh/id_rsa_NOME_UNICO
+
+*testar ssh*
+ssh -T git@github.com-usuario_git
+
+
+*créditos:*
+https://dev.to/devtiagoabreu/multiplas-chaves-ssh-para-github-43l5
+
