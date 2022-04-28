@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Protoss" title="Protoss"  width="200px" height="150px" src=".github/logo_.png" />
+    <img alt="Protoss" title="Protoss"  src=".github/logo_.png" />
 </h1>
 
 <p align="center">
