@@ -18,7 +18,7 @@
 <br>
 
 <p align="center">
-  <img alt="Protoss" src=".github/protoss.png" width="100%">
+  <img alt="Protoss" src=".github/logo.jpg" width="100%">
 </p>
 
 ## 🚀 Tecnologias
