@@ -143,6 +143,10 @@ ok
 --Seguindo/deseguindo
 ok
 
+--Lista de seguidores
+ok
+
+
 
 
 
