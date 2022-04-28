@@ -146,7 +146,8 @@ ok
 --Lista de seguidores
 ok
 
-
+--Lista de Fotos (fim API até data 28/04/2022)
+ok
 
 
 
