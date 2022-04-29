@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\LeadController;
 use App\Http\Controllers\FeedController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\SearchController;
@@ -21,6 +22,7 @@ Route::post('/auth/logout', [AuthController::class, 'logout']);
 Route::post('/auth/refresh', [AuthController::class, 'refresh']);
 
 Route::post('/user', [AuthController::class, 'create']);
+Route::post('/lead', [LeadController::class, 'create']);
 
 Route::put('/user', [UserController::class, 'update']);
 Route::post('/user/avatar', [UserController::class, 'updateAvatar']);
