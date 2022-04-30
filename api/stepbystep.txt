@@ -155,3 +155,10 @@ OK
 
 
 --iniciando CMS Admin LTE
+--CRIANDO CONTROLLERS E MODELS
+php artisan make:Controller AdminController
+php artisan make:Controller SiteController
+
+--Divisão entre Frente e Admin
+ok
+
