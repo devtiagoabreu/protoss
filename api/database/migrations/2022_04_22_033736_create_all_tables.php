@@ -84,6 +84,13 @@ return new class extends Migration
             $table->string('active', 255)->default('1');
             $table->datetime('created_at');
         });
+
+        Schema::create('tokens', function (Blueprint $table) {
+            $table->integer('id_user');
+            $table->string('type', 30);
+            $table->datetime('created_at');
+            $table->text('token');
+        });
     }
 
     /**
@@ -100,5 +107,6 @@ return new class extends Migration
         Schema::dropIfExists('postcomments');
         Schema::dropIfExists('leads');
         Schema::dropIfExists('products');
+        Schema::dropIfExists('tokens');
     }
 };
