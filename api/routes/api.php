@@ -8,7 +8,7 @@ use App\Http\Controllers\LeadController;
 use App\Http\Controllers\FeedController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\SearchController;
-
+use App\Http\Controllers\TokenController;
 
 Route::get('/ping', function(){
     return ['pong'=>true];
@@ -25,7 +25,6 @@ Route::post('/user', [AuthController::class, 'create']);
 
 Route::post('/lead', [AuthController::class, 'createLead']);
 
-
 Route::put('/user', [UserController::class, 'update']);
 Route::post('/user/avatar', [UserController::class, 'updateAvatar']);
 Route::post('/user/cover', [UserController::class, 'updateCover']);
@@ -33,6 +32,7 @@ Route::post('/user/cover', [UserController::class, 'updateCover']);
 Route::get('/feed', [FeedController::class, 'read']);
 Route::get('/user/feed', [FeedController::class, 'userFeed']);
 Route::get('/user/photos', [FeedController::class, 'userPhotos']);
+Route::get('/user/token', [TokenController::class, 'tokenRead']);
 
 Route::get('/user/{id}/feed', [FeedController::class, 'userFeed']);
 Route::post('/user/{id}/follow', [UserController::class, 'follow']);
@@ -43,6 +43,8 @@ Route::get('/user', [UserController::class, 'read']);
 Route::get('/user/{id}', [UserController::class, 'read']);
 
 Route::post('/feed', [FeedController::class, 'create']);
+
+Route::post('/token', [TokenController::class, 'tokenCreate']);
 
 Route::post('/post/{id}/like', [PostController::class, 'like']);
 Route::post('/post/{id}/comment', [PostController::class, 'comment']);
