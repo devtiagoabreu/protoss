@@ -67,33 +67,15 @@ class TokenController extends Controller
         $id = $this->loggedUser['id'];
       }
 
-      //2. trazendo o último token
+      // trazendo o último token
       $token = Token::where('id_user', $id)
       ->orderBy('created_at', 'DESC')
       ->limit(1)
       ->get();
 
-      //3. preencher as informações adicionais do token
-      //$token = $this->_tokenListToObject($tokenList, $id);
-      
       $array['token'] = $token;
       
       return $array;
   }
 
-    private function _tokenListToObject($tokenList, $loggedId) {
-      foreach($tokenList as $tokenKey => $tokenItem) {
-          
-        //verificar se o token é do usuário logado
-        if ($tokenItem['id_user'] == $loggedId) {
-            $tokenList[$tokenKey]['mine'] = true;
-        } else {
-            $tokenList[$tokenKey]['mine'] = false;
-        }
-      }
-
-      return $tokenList;
-  }
-
-    
 }
