@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Login</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="main.js"></script>
+</head>
+<body>
+  <div class="main-login" id="main-login">
+    <div class="logo-login" id="logo-login">
+      <h1>Token<br>Unimed</h1>
+      <img src="token.svg" class="logo-login-image" alt="Token">
+    </div>
+    <form id="form" onsubmit="loginUser()">
+      <div class="form-login" id="form-login">
+        <div class="card-login" id="card-login">
+          <h1>LOGIN</h1>
+          <div class="textfield" id="textfield">
+            <label for="email">e-mail</label>
+            <input id="email" type="email" name="email" placeholder="Digite seu e-mail">
+          </div>
+          <div class="textfield" id="textfield">
+            <label for="password">password</label>
+            <input id="password" type="password" name="password" placeholder="Digite sua senha">
+          </div>
+          <button class="btn-login" id="btn-login" type="submit">Login</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div id="renderResults"></div>
+</body>
+</html>
